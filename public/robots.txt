@@ -1,0 +1,35 @@
+# Allow all web crawlers to access the entire site
+User-agent: *
+Disallow:
+
+# Specify the location of the sitemap
+Sitemap: https://www.bicc-bd.com/sitemap.xml
+
+# Block access to specific directories or files (example)
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+Disallow: /login
+
+# Allow specific bots to access blocked areas (example for Googlebot)
+User-agent: Googlebot
+Disallow: /private/
+
+# Prevent all web crawlers from accessing certain sections (example)
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /junk/
+
+# Allow all bots to access everything
+User-agent: *
+Disallow:
+
+# Disallow specific bots (example for a specific bot)
+User-agent: BadBot
+Disallow: /
+
+# Crawl-delay to manage server load (example for all bots)
+User-agent: *
+Crawl-delay: 10
+
